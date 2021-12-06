@@ -38,6 +38,9 @@ public class SendingTest extends Base{
             Runtime.getRuntime().exec("C:\\Users\\user\\Documents\\fileupload.exe");
             Thread.sleep(3000);
             sp.clickSend().click();
+	    sp.clickMyProfile().click();
+            Thread.sleep(3000);
+            sp.clickSignOut().click();
 	}
 
 }
