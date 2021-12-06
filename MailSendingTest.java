@@ -5,11 +5,13 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import pageObject.SenderLoginPage;
+import pageObject.SendingPage;
 import resource.Base;
 
+public class SendingTest extends Base{
 @Test
 
-public class MailSendingTest extends Base{
+	
 	public void initialize() throws IOException, InterruptedException
 	{
 		 driver =initializeDriver();
@@ -18,16 +20,25 @@ public class MailSendingTest extends Base{
          SenderLoginPage slp = new SenderLoginPage(driver);
 			//Login with valid user credentials
 			        
-					slp.getMailId().sendKeys("Donkeysorus11@zoho.in");
+					slp.getMailId().sendKeys("Yeaaahoooo11@zoho.in");
 					slp.clickNext().click();
-					slp.getPassword().sendKeys("Donkeyzz@1234");
+					Thread.sleep(5000);
+					slp.getPassword().sendKeys("Yeaho@1234");
 					slp.clickLogin().click();
-					
-			pageObject.MailSendingPage msp = new pageObject.MailSendingPage(driver);
-			msp.clickNewMail().click();
-            msp.getRecieverId().sendKeys("Monkeysorus11@zoho.in");
-            msp.clickAttachment().click();
-            
+					Thread.sleep(20000);
+	 
+		    SendingPage sp= new SendingPage(driver);
+			sp.clickNewMail().click();
+            sp.getToId().sendKeys("Monkeysorus11@zoho.in");
+            sp.getSubject().sendKeys("submitting document");
+            Thread.sleep(3000);
+            sp.clickAttacher().click();
+            Thread.sleep(5000);
+            sp.clickDrag().click();
+            Runtime.getRuntime().exec("C:\\Users\\user\\Documents\\fileupload.exe");
+            Thread.sleep(3000);
+            sp.clickSend().click();
 	}
 
 }
+
