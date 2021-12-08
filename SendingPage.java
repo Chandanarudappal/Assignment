@@ -12,6 +12,7 @@ public class SendingPage extends Base {
 	By Subject = By.xpath("//*[@id=\"zmsub_Cmp1\"]");
         By Attacher = By.className("zei-attachment");
 	By Drag = By.xpath("//*[@id=\"zmAttachCompWhtPopup_tabPopupDialog\"]/div/div[1]/div[3]/div[1]/div[2]/div");
+	By Attach = By.xpath("//*[@id=\"0_tabPopupButton\"]/span[1]");
 	By Send = By.xpath("//*[@id=\"jsMSCenterIcon\"]/ul[1]/li/b/span/span");
 	By MyProfile = By.className("zmavatar__image");
 	By SignOut = By.className("zmbtn__text");
@@ -46,10 +47,10 @@ public class SendingPage extends Base {
 		return driver.findElement(Drag);
 		
 	}
-	//public WebElement clickupload( ) {
-		//return driver.findElement(upload);
+	public WebElement clickAttach( ) {
+		return driver.findElement(Attach);
 	
-	//}
+	}
 	
 	public WebElement clickSend() {
 		return driver.findElement(Send);
