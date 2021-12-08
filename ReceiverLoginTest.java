@@ -20,11 +20,16 @@ public class ReceiverLoginTest extends Base {
 			 ReceiverLoginPage rlp = new ReceiverLoginPage(driver);
 				//Login with valid user credentials
 				        
-						rlp.getMailId().sendKeys("monkeysorus11@zoho.in");
+						rlp.getMailId().sendKeys("Donkeysorus11@zoho.in");
 						rlp.clickNext().click();
-						rlp.getPassword().sendKeys("Chimpzz@1234");
+						rlp.getPassword().sendKeys("Donkeyzz@1234");
 						rlp.clickLogin().click();
+						Thread.sleep(20000);
+						rlp.clickInbox().click();
+						Thread.sleep(3000);
+						
 		}
+}
 		
 					
 
