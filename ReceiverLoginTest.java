@@ -25,19 +25,6 @@ public class ReceiverLoginTest extends Base {
 						rlp.getPassword().sendKeys("Chimpzz@1234");
 						rlp.clickLogin().click();
 		}
-		//@Test
-		//public void SenderLoginPage(){
-			
-			
-			//SenderLoginPage slp = new SenderLoginPage(driver);
-			//Login with valid user credentials
-			        
-					//slp.getMailId().sendKeys("Monkeysorus11@zoho.com");
-					//slp.clickNext().click();
-					//.getPassword().sendKeys("Chimpzz@1234");
-					//slp.clickLogin().click();
-		}
 		
-	//}
 					
 
