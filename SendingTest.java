@@ -35,6 +35,8 @@ public class SendingTest extends Base{
             sp.clickAttacher().click();
             Thread.sleep(5000);
             sp.clickDrag().click();
+	    Thread.sleep(3000);
+            sp.clickAttach().click();
             Runtime.getRuntime().exec("C:\\Users\\user\\Documents\\fileupload.exe");
             Thread.sleep(3000);
             sp.clickSend().click();
